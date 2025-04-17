@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studiu de Caz - Metode Numerice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f7f9;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e90ff, #00bcd4);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffe082;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 1rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e1f5fe;
+            animation: pulse 1s infinite;
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-flask"></i> Studiu de Caz: Influența Numărului de Iterații</h1>
+        <nav>
+            <a href="../index.html"><i class="fas fa-home"></i> Introducere</a>
+            <a href="../pages/studiu.html"><i class="fas fa-chart-line"></i> Studiu de Caz</a>
+            <a href="../pages/concluzie.html"><i class="fas fa-lightbulb"></i> Concluzii</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2><i class="fas fa-book"></i> Context</h2>
+        <p>Se analizează o ecuație diferențială simplă: <code>y' = y - x</code> cu condiția inițială <code>y(0) = 1</code>. Soluția exactă se compară cu cele obținute prin metodele Euler și Runge-Kutta.</p>
+
+        <h2><i class="fas fa-table"></i> Tabel comparativ</h2>
+        <table>
+            <tr>
+                <th>Număr It.</th>
+                <th>Soluție Exactă</th>
+                <th>Euler</th>
+                <th>Runge-Kutta</th>
+                <th>EROARE Euler</th>
+                <th>EROARE Runge-Kutta</th>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2.718</td>
+                <td>2.406</td>
+                <td>2.705</td>
+                <td>0.312</td>
+                <td>0.013</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2.718</td>
+                <td>2.578</td>
+                <td>2.713</td>
+                <td>0.140</td>
+                <td>0.005</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>2.718</td>
+                <td>2.648</td>
+                <td>2.717</td>
+                <td>0.070</td>
+                <td>0.001</td>
+            </tr>
+        </table>
+
+        <h2><i class="fas fa-eye"></i> Observații</h2>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> Metoda Runge-Kutta oferă o precizie mai mare chiar și cu un număr mic de iterații.</li>
+            <li><i class="fas fa-chart-bar"></i> Creșterea numărului de iterații reduce eroarea în ambele metode.</li>
+            <li><i class="fas fa-exclamation-circle"></i> Euler este simplă dar mai puțin precisă pentru valori mari ale pasului.</li>
+        </ul>
+
+        <a href="../index.html" class="back"><i class="fas fa-arrow-left"></i> Înapoi la Pagina Principală</a>
+    </div>
+</body>
+</html>

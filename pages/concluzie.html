@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concluzii - Metode Numerice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #00bcd4, #1e90ff);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffe082;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li i {
+            color: #1e88e5;
+            margin-right: 10px;
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-lightbulb"></i> Concluzii Finale</h1>
+        <nav>
+            <a href="../index.html"><i class="fas fa-home"></i> Introducere</a>
+            <a href="../pages/studiu.html"><i class="fas fa-book-open"></i> Studiu de Caz</a>
+            <a href="../pages/concluzie.html"><i class="fas fa-check-circle"></i> Concluzii</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2><i class="fas fa-clipboard-list"></i> Rezumat</h2>
+        <p>În urma studiului comparativ între soluția exactă și cele obținute prin metode numerice, putem trage următoarele concluzii:</p>
+
+        <h2><i class="fas fa-lightbulb"></i> Concluzii</h2>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> Precizia metodelor numerice depinde direct de numărul de iterații efectuate (sau echivalent, de pasul de integrare).</li>
+            <li><i class="fas fa-check-circle"></i> Metoda Runge-Kutta de ordinul 4 oferă o precizie superioară față de metoda Euler, chiar și cu un număr mai mic de pași.</li>
+            <li><i class="fas fa-exclamation-circle"></i> Metoda Euler, deși mai simplă și mai rapidă computațional, introduce erori mai mari, mai ales pe intervale mari sau cu pași mari.</li>
+            <li><i class="fas fa-star"></i> În aplicații practice unde precizia este critică, este recomandată folosirea unei metode de ordin superior (ex: Runge-Kutta).</li>
+            <li><i class="fas fa-brain"></i> Cunoștințele despre comportamentul erorii ajută la alegerea metodei și a numărului de pași pentru un echilibru optim între precizie și eficiență.</li>
+        </ul>
+
+        <h2><i class="fas fa-tools"></i> Recomandări</h2>
+        <ul>
+            <li><i class="fas fa-code"></i> Se recomandă implementarea metodelor numerice într-un mediu de programare care permite vizualizarea grafică a rezultatelor (ex: Python, MATLAB).</li>
+            <li><i class="fas fa-check-double"></i> Este important să se valideze rezultatele numerice prin compararea cu soluția exactă, dacă aceasta este cunoscută.</li>
+        </ul>
+
+        <a href="../index.html" class="back"><i class="fas fa-arrow-left"></i> Înapoi la Pagina Principală</a>
+    </div>
+</body>
+</html>
